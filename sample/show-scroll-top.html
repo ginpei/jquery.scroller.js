@@ -45,9 +45,13 @@
 			$(function() {
 				var $top = $('#scrollTop');
 				var $onScrollToEnd = $('#onscrolltoend');
+
+				// udpate scrollTop value
 				$.scroller.on('scroll', function(event) {
 					$top.text($.scroller.top);
 				});
+
+				// Show message when scrolled to end of the page
 				$.scroller.on('scrolltoend', function(event) {
 					$onScrollToEnd
 						.stop()
