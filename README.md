@@ -2,6 +2,31 @@
 
 The unique ovserver for scroll event.
 
+## Demo
+
+Here:
+
+* http://ginpei.github.io/jquery.scroller.js/sample/show-scroll-top.html
+
+## Example
+
+via Demo.
+
+```js
+// udpate scrollTop value
+$.scroller.on('scroll', function(event) {
+    $top.text($.scroller.top);
+});
+
+// Show message when scrolled to end of the page
+$.scroller.on('scrolltoend', function(event) {
+    $onScrollToEnd
+        .stop()
+        .css({ opacity:1 })
+        .fadeTo(1000, 0);
+});
+```
+
 # Referencese
 
 ## jQuery.scroller.on(type, listener, [context])
