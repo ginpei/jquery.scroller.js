@@ -1,9 +1,33 @@
 jQuery.scroller = (function(document) {
 	var scroller = $({});
 
+	// cache
 	var html = document.documentElement;
 	var body = document.body;
 
+	/**
+	 * Entry point.
+	 */
+	scroller.initialize = function() {
+		// set up properties
+		scroller.updateWindowInformations();
+
+		// listen
+		$(document).on('scroll', function(event) {
+			scroller.onscroll(event);
+		});
+		$(window).on('resize', function(event) {
+			scroller.updateWindowInformations(event);
+		});
+
+		// prevent re-run
+		delete scroller.initialize;
+	};
+
+	/**
+	 * Called when scrolled.
+	 * @param {Event} event A scroll event.
+	 */
 	scroller.onscroll = function(event) {
 		scroller.top = body.scrollTop || html.scrollTop;
 		scroller.trigger('scroll', event);
@@ -13,24 +37,22 @@ jQuery.scroller = (function(document) {
 		}
 	};
 
+	/**
+	 * @return Boolean
+	 */
 	scroller.isOnBottom = function() {
 		return (this.top + this.windowHeight >= this.pageHeight);
 	};
 
-	scroller.updateWindowInformations = function(event) {
+	/**
+	 * Update page height and window height.
+	 */
+	scroller.updateWindowInformations = function() {
 		this.pageHeight = body.scrollHeight;
 		this.windowHeight = html.clientHeight;
 	};
 
-	$(document).on('scroll', function(event) {
-		scroller.onscroll(event);
-	});
-	$(window).on('resize', function(event) {
-		scroller.updateWindowInformations(event);
-	});
-
-	// initialize
-	scroller.updateWindowInformations();
+	scroller.initialize();
 
 	return scroller;
 })(document);
