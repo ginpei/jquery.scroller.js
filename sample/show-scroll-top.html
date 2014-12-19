@@ -26,20 +26,33 @@
 				text-align: right;
 				width: 50px;
 			}
+			#onscrolltoend {
+				background-color: #ff0;
+				text-align: center;
+				opacity: 0;
+			}
 		</style>
 	</head>
 	<body>
 		<h1>Show scrollTop</h1>
 		<div id="float-top-right">
-			<code>scrollTop</code> = <span id="scrollTop">0</span>px
+			<p><code>scrollTop</code> = <span id="scrollTop">0</span>px</p>
+			<p id="onscrolltoend">Scroll to end!</p>
 		</div>
 		<script src="jquery.min.js"></script>
 		<script src="../jquery.scroller.js"></script>
 		<script>
 			$(function() {
 				var $top = $('#scrollTop');
+				var $onScrollToEnd = $('#onscrolltoend');
 				$.scroller.on('scroll', function(event) {
 					$top.text($.scroller.top);
+				});
+				$.scroller.on('scrolltoend', function(event) {
+					$onScrollToEnd
+						.stop()
+						.css({ opacity:1 })
+						.fadeTo(1000, 0);
 				});
 			});
 		</script>
