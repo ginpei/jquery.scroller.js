@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ja">
+	<head>
+		<meta charset="UTF-8">
+		<title>Show scrollTop</title>
+		<style>
+			body {
+				background-image: linear-gradient(#333 0, #fff 1px);
+				background-size: 100px 100px;
+				min-height: 30000px;
+			}
+			code {
+				background-color: #ccc;
+				border-radius: 4px;
+				text-shadow: 1px 1px 0 #fff;
+				padding: 4px;
+			}
+			#float-top-right {
+				right: 10px;
+				position: fixed;
+				top: 10px;
+			}
+			#scrollTop {
+				display: inline-block;
+				font-family: monospace;
+				text-align: right;
+				width: 50px;
+			}
+		</style>
+	</head>
+	<body>
+		<h1>Show scrollTop</h1>
+		<div id="float-top-right">
+			<code>scrollTop</code> = <span id="scrollTop">0</span>px
+		</div>
+		<script src="jquery.min.js"></script>
+		<script src="../jquery.scroller.js"></script>
+		<script>
+			$(function() {
+				var $top = $('#scrollTop');
+				$.scroller.on('scroll', function(event) {
+					$top.text($.scroller.top);
+				});
+			});
+		</script>
+	</body>
+</html>
