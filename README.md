@@ -1,6 +1,6 @@
 # About jQuery.scroller.js
 
-The unique ovserver for scroll event.
+The unique ovserver for scroll event. Easy to observe scrolling.
 
 ## Demo
 
