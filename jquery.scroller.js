@@ -6,6 +6,12 @@ jQuery.scroller = (function(document) {
 	var body = document.body;
 
 	/**
+	 * Margin for detect the end of page.
+	 * @type Number
+	 */
+	scroller.marginBottom = 0;
+
+	/**
 	 * Entry point.
 	 */
 	scroller.initialize = function() {
@@ -41,7 +47,7 @@ jQuery.scroller = (function(document) {
 	 * @return Boolean
 	 */
 	scroller.isOnBottom = function() {
-		return (this.top + this.windowHeight >= this.pageHeight);
+		return (this.top + this.windowHeight + this.marginBottom >= this.pageHeight);
 	};
 
 	/**
