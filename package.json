@@ -1,0 +1,30 @@
+{
+  "name": "jquery.scroller.js",
+  "version": "0.0.0",
+  "description": "The unique ovserver for scroll event.",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "./node_modules/mocha/bin/mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ginpei/jquery.scroller.js"
+  },
+  "keywords": [
+    "scroll",
+    "event"
+  ],
+  "author": "TAKANASHI Ginpei",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ginpei/jquery.scroller.js/issues"
+  },
+  "homepage": "https://github.com/ginpei/jquery.scroller.js",
+  "devDependencies": {
+    "chai": "^1.9.1",
+    "mocha": "^1.20.1"
+  }
+}
