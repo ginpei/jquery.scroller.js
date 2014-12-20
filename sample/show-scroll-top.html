@@ -48,7 +48,7 @@
 		<script>
 			$(function() {
 				var $top = $('#scrollTop');
-				var $height = $('#pageHeight');
+				var $pageHeight = $('#pageHeight');
 				var $windowHeight = $('#windowHeight');
 				var $onScrollToEnd = $('#onscrolltoend');
 				var scroller = $.scroller;
@@ -75,7 +75,7 @@
 
 				// show page height
 				function updateHeight() {
-					$height.text(scroller.height);
+					$pageHeight.text(scroller.pageHeight);
 					$windowHeight.text(scroller.windowHeight);
 				}
 				updateHeight();
