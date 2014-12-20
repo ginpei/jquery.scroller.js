@@ -3,8 +3,7 @@ jQuery.scroller = (function(document) {
 
 	// cache
 	var elHtml = document.documentElement;
-	var elBody = document.body;
-	var elScrollable = (navigator.userAgent.indexOf('WebKit')<0 ? elHtml : elBody);
+	var elScrollable = (navigator.userAgent.indexOf('WebKit')<0 ? elHtml : document.body);
 
 	/**
 	 * Margin for detect the end of page.
@@ -66,7 +65,7 @@ jQuery.scroller = (function(document) {
 	 * Update page height and window height.
 	 */
 	scroller.updateWindowInformations = function() {
-		this.height = elBody.scrollHeight;
+		this.height = elScrollable.scrollHeight;
 		this.windowHeight = elHtml.clientHeight;
 	};
 
