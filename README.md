@@ -80,3 +80,11 @@ Don't overwrite.
 * `"scroll"`
 * `"scrolltoend"` (means: scroll-to-end)
 
+# Support
+
+* IE 8+
+* Firefox
+* Google Chrome
+* Safari
+* iOS Safari
+
