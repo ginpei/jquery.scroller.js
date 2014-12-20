@@ -46,6 +46,9 @@
 				var $top = $('#scrollTop');
 				var $onScrollToEnd = $('#onscrolltoend');
 
+				// for old IE
+				$onScrollToEnd.css('opacity', 0);
+
 				// udpate scrollTop value
 				$.scroller.on('scroll', function(event) {
 					$top.text($.scroller.top);
