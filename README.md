@@ -39,11 +39,13 @@ Remove listener(s). jQuery's API.
 
 ## jQuery.scroller.top
 
-scrollTop.
+scrollTop. For read only.
 
 * type … Number
 
-Update when scrolled.
+This value is updated when page is scrolled.
+
+Don't overwrite.
 
 ## jQuery.scroller.marginBottom
 
