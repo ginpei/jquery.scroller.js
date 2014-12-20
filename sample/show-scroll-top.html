@@ -20,7 +20,9 @@
 				position: fixed;
 				top: 10px;
 			}
-			#scrollTop {
+			#scrollTop,
+			#windowHeight,
+			#pageHeight {
 				display: inline-block;
 				font-family: monospace;
 				text-align: right;
@@ -37,6 +39,8 @@
 		<h1>Show scrollTop</h1>
 		<div id="float-top-right">
 			<p><code>scrollTop</code> = <span id="scrollTop">0</span>px</p>
+			<p><code>window height</code> = <span id="windowHeight">0</span>px</p>
+			<p><code>page height</code> = <span id="pageHeight">0</span>px</p>
 			<p id="onscrolltoend">Scroll to end!</p>
 		</div>
 		<script src="jquery.min.js"></script>
@@ -44,6 +48,8 @@
 		<script>
 			$(function() {
 				var $top = $('#scrollTop');
+				var $height = $('#pageHeight');
+				var $windowHeight = $('#windowHeight');
 				var $onScrollToEnd = $('#onscrolltoend');
 
 				// for old IE
@@ -61,6 +67,14 @@
 						.css({ opacity:1 })
 						.fadeTo(1000, 0);
 				});
+
+				// show page height
+				function updateHeight() {
+					$height.text($.scroller.height);
+					$windowHeight.text($.scroller.windowHeight);
+				}
+				updateHeight();
+				$(window).resize(updateHeight);
 			});
 		</script>
 	</body>
