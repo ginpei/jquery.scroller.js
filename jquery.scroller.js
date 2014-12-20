@@ -19,8 +19,8 @@ jQuery.scroller = (function(document) {
 		scroller.updateWindowInformations();
 
 		// listen
-		if (document.addEventListener) {
-			document.addEventListener('scroll', function(event) {
+		if (window.addEventListener) {
+			window.addEventListener('scroll', function(event) {
 				scroller.onscroll(event);
 			});
 			window.addEventListener('resize', function(event) {
