@@ -3,7 +3,7 @@
   "version": "0.0.0",
   "description": "The unique ovserver for scroll event. Easy to observe scrolling. ",
   "scripts": {
-    "minify": "./node_modules/uglify-js/bin/uglifyjs jquery.scroller.js > jquery.scroller.min.js"
+    "minify": "node_modules/uglify-js/bin/uglifyjs jquery.scroller.js -o jquery.scroller.min.js -c -m --comments \"/^\\!/\""
   },
   "repository": {
     "type": "git",
