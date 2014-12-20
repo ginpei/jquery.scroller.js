@@ -88,3 +88,5 @@ Don't overwrite.
 * Safari
 * iOS Safari
 
+I'm sorry, I don't know about Android.
+
