@@ -63,6 +63,16 @@ This value is updated when page is loaded or resized.
 
 Don't overwrite.
 
+## jQuery.scroller.windowHeight
+
+The page window height you can see. For read only.
+
+* type … Number
+
+This value is updated when page is loaded or resized.
+
+Don't overwrite.
+
 ## Events
 
 * `"scroll"`
