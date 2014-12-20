@@ -20,13 +20,23 @@ jQuery.scroller = (function(document) {
 		scroller.updateWindowInformations();
 
 		// listen
-		$(window)
-			.on('scroll', function(event) {
+		if (document.addEventListener) {
+			document.addEventListener('scroll', function(event) {
 				scroller.onscroll(event);
-			})
-			.on('resize', function(event) {
+			});
+			window.addEventListener('resize', function(event) {
 				scroller.updateWindowInformations(event);
 			});
+		}
+		else {
+			$(window)
+				.on('scroll', function(event) {
+					scroller.onscroll(event);
+				})
+				.on('resize', function(event) {
+					scroller.updateWindowInformations(event);
+				});
+		}
 
 		// prevent re-run
 		delete scroller.initialize;
