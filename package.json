@@ -1,7 +1,7 @@
 {
   "name": "jquery.scroller.js",
   "version": "0.0.0",
-  "description": "The unique ovserver for scroll event.",
+  "description": "The unique ovserver for scroll event. Easy to observe scrolling. ",
   "scripts": {
     "minify": "./node_modules/uglify-js/bin/uglifyjs jquery.scroller.js > jquery.scroller.min.js"
   },
