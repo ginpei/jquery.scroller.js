@@ -2,8 +2,8 @@ jQuery.scroller = (function(document) {
 	var scroller = $({});
 
 	// cache
-	var html = document.documentElement;
-	var body = document.body;
+	var elHtml = document.documentElement;
+	var elBody = document.body;
 
 	/**
 	 * Margin for detect the end of page.
@@ -36,7 +36,7 @@ jQuery.scroller = (function(document) {
 	 * @param {Event} event A scroll event.
 	 */
 	scroller.onscroll = function(event) {
-		scroller.top = body.scrollTop || html.scrollTop;
+		scroller.top = elBody.scrollTop || elHtml.scrollTop;
 		scroller.trigger('scroll', event);
 
 		if (this.isOnBottom()) {
@@ -55,8 +55,8 @@ jQuery.scroller = (function(document) {
 	 * Update page height and window height.
 	 */
 	scroller.updateWindowInformations = function() {
-		this.pageHeight = body.scrollHeight;
-		this.windowHeight = html.clientHeight;
+		this.pageHeight = elBody.scrollHeight;
+		this.windowHeight = elHtml.clientHeight;
 	};
 
 	scroller.initialize();
