@@ -1,4 +1,4 @@
-jQuery.scroller = (function(document) {
+jQuery.scroller = (function(window, document) {
 	var scroller = $({});
 
 	// cache
@@ -72,4 +72,4 @@ jQuery.scroller = (function(document) {
 	scroller.initialize();
 
 	return scroller;
-})(document);
+})(window, document);
