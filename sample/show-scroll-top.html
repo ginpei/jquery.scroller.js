@@ -50,17 +50,18 @@
 				var $height = $('#pageHeight');
 				var $windowHeight = $('#windowHeight');
 				var $onScrollToEnd = $('#onscrolltoend');
+				var scroller = $.scroller;
 
 				// for old IE
 				$onScrollToEnd.css('opacity', 0);
 
 				// udpate scrollTop value
-				$.scroller.on('scroll', function(event) {
-					$top.text($.scroller.top);
+				scroller.on('scroll', function(event) {
+					$top.text(scroller.top);
 				});
 
 				// Show message when scrolled to end of the page
-				$.scroller.on('scrolltoend', function(event) {
+				scroller.on('scrolltoend', function(event) {
 					$onScrollToEnd
 						.stop()
 						.css({ opacity:1 })
@@ -69,8 +70,8 @@
 
 				// show page height
 				function updateHeight() {
-					$height.text($.scroller.height);
-					$windowHeight.text($.scroller.windowHeight);
+					$height.text(scroller.height);
+					$windowHeight.text(scroller.windowHeight);
 				}
 				updateHeight();
 				$(window).resize(updateHeight);
