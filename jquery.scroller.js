@@ -4,6 +4,7 @@ jQuery.scroller = (function(document) {
 	// cache
 	var elHtml = document.documentElement;
 	var elBody = document.body;
+	var elScrollable = (navigator.userAgent.indexOf('WebKit')<0 ? elHtml : elBody);
 
 	/**
 	 * Margin for detect the end of page.
@@ -36,7 +37,7 @@ jQuery.scroller = (function(document) {
 	 * @param {Event} event A scroll event.
 	 */
 	scroller.onscroll = function(event) {
-		scroller.top = elBody.scrollTop || elHtml.scrollTop;
+		scroller.top = elScrollable.scrollTop;
 		scroller.trigger('scroll', event);
 
 		if (this.isOnBottom()) {
