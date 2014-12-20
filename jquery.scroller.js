@@ -49,14 +49,14 @@ jQuery.scroller = (function(document) {
 	 * @return Boolean
 	 */
 	scroller.isOnBottom = function() {
-		return (this.top + this.windowHeight + this.marginBottom >= this.pageHeight);
+		return (this.top + this.windowHeight + this.marginBottom >= this.height);
 	};
 
 	/**
 	 * Update page height and window height.
 	 */
 	scroller.updateWindowInformations = function() {
-		this.pageHeight = elBody.scrollHeight;
+		this.height = elBody.scrollHeight;
 		this.windowHeight = elHtml.clientHeight;
 	};
 

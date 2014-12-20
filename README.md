@@ -53,7 +53,7 @@ Margin for detect the end of page. Default is `0`.
 
 For example: When the page's height is 1000 px and the window height is 100 px, to scroll 900 px fires `scrolltoend` event. In this case, you can use `jQuery.scroller.marginbottom = 100` to fire that event when scrolled to 800px.
 
-## jQuery.scroller.pageHeight
+## jQuery.scroller.height
 
 The page height you can scroll. For read only.
 
