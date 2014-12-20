@@ -1,3 +1,5 @@
+/*! jQuery.scroller.js v0.0.0 by TAKANASHI Ginpei */
+/*  https://github.com/ginpei/jquery.scroller.js  */
 jQuery.scroller = (function(window, document) {
 	var scroller = $({});
 
