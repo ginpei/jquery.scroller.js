@@ -20,11 +20,10 @@
 				position: fixed;
 				top: 10px;
 			}
-			#scrollTop,
-			#windowHeight,
-			#pageHeight {
+			var.number {
 				display: inline-block;
 				font-family: monospace;
+				font-style: normal;
 				text-align: right;
 				width: 50px;
 			}
@@ -38,9 +37,9 @@
 	<body>
 		<h1>Show scrollTop</h1>
 		<div id="float-top-right">
-			<p><code>scrollTop</code> = <span id="scrollTop">0</span>px</p>
-			<p><code>window height</code> = <span id="windowHeight">0</span>px</p>
-			<p><code>page height</code> = <span id="pageHeight">0</span>px</p>
+			<p><code>scrollTop</code> = <var id="scrollTop" class="number">0</var>px</p>
+			<p><code>window height</code> = <var id="windowHeight" class="number">0</var>px</p>
+			<p><code>page height</code> = <var id="pageHeight" class="number">0</var>px</p>
 			<p id="onscrolltoend">Scroll to end!</p>
 		</div>
 		<script src="jquery.min.js"></script>
