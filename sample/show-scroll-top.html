@@ -52,9 +52,6 @@
 				var $onScrollToEnd = $('#onscrolltoend');
 				var scroller = $.scroller;
 
-				// for old IE
-				$onScrollToEnd.css('opacity', 0);
-
 				// udpate scrollTop value
 				scroller.on('scroll', function(event) {
 					$top.text(scroller.top);
@@ -67,6 +64,13 @@
 						.css({ opacity:1 })
 						.fadeTo(1000, 0);
 				});
+
+				// --------------------------------
+				// for sample display
+				// (not for example to use this lib)
+
+				// for old IE
+				$onScrollToEnd.css('opacity', 0);
 
 				// show page height
 				function updateHeight() {
