@@ -22,6 +22,6 @@
   },
   "homepage": "http://ginpei.github.io/jquery.scroller.js/sample/show-scroll-top.html",
   "devDependencies": {
-    "uglify-js": "~2.4.16"
+    "uglify-js": "~2.8.22"
   }
 }
