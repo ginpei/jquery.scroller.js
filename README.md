@@ -1,5 +1,7 @@
 # About jQuery.scroller.js
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/ginpei/jquery.scroller.js.svg)](https://greenkeeper.io/)
+
 The unique ovserver for scroll event. Easy to observe scrolling.
 
 ## Demo
